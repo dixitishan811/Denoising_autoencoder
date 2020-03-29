@@ -69,6 +69,6 @@ noisy_image = Input(shape=(784,))
 x = autoencoder(noisy_image)
 y = classifier(x)
 
-denoise_and_classify = Model(noisy_image, y)
+model= Model(noisy_image, y)
 
-p = denoise_and_classify.predict(x_test_noisy)
+p = model.predict(x_test_noisy)
